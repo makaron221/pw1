@@ -5,7 +5,7 @@ app.config["SECRET_KEY"] = "1234567890"
 
 from flask import render_template, redirect, url_for
 import sqlite3
-from .forms import Create_ChangeForm, DeleteForm
+from forms import Create_ChangeForm, DeleteForm
 
 @app.route("/", methods=["GET", 'POST'])
 def index():
