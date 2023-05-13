@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{%block title%}<title>change</title>{%endblock%}
+{%block content%}
+<h3><a href="{{url_for('create')}}">create</a></h3>
+<p>write num to delete</p>
+<form method="post" novalidate>
+    {{ form.hidden_tag() }}
+    {{form.num}}
+    {{form.submit}}
+</form>
+{% for i in posts %}
+<p>{{i[0]}}</p>
+<hr>
+<p>{{i[1]}}</p>
+<br>
+{% endfor %}
+{%endblock%}
